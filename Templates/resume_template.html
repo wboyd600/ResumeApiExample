@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .job {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>{{name}}</h1>
+    <h2>{{title}}</h2>
+    <p>{{summary}}</p>
+
+    <div class="section">
+        <h3>Experience</h3>
+        {{#each experiences}}
+        <div class="job">
+            <strong>{{role}}</strong> at {{company}} ({{startDate}} - {{endDate}})
+            <p>{{description}}</p>
+        </div>
+        {{/each}}
+    </div>
+</body>
+
+</html>
